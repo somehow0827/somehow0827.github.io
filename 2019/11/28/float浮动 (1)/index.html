@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>float浮动 (1) - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="文档流文档流是文档中可显示对象在排列时所占用的位置  （块标签在文档流中的默认排列方式是从上到下，内联标签在文档流中的默认排列方式是从左到右）
+float特性加浮动的元素，会脱离文档流，会延迟父容器,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" target="_blank" rel="noopener" data-url="https://somehow0827.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">float浮动 (1)</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" target="_blank" rel="noopener" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;" target="_blank" rel="noopener"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">float浮动 (1)</h1>
+        <div class="stuff">
+            <span>十一月 28, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><pre><code>文档流是文档中可显示对象在排列时所占用的位置</code></pre><p>  （块标签在文档流中的默认排列方式是从上到下，内联标签在文档流中的默认排列方式是从左到右）</p>
+<h2 id="float特性"><a href="#float特性" class="headerlink" title="float特性"></a>float特性</h2><pre><code>加浮动的元素，会脱离文档流，会延迟父容器靠左或靠右排列，如果之前已经有浮动的元素，会挨着浮动的元素进行排列。</code></pre><h2 id="float取值"><a href="#float取值" class="headerlink" title="float取值"></a>float取值</h2><p>right<br>left<br>none（默认值：不具备 浮动）</p>
+<p>这个是两个盒子box1和box2:<br><img src="https://img-blog.csdnimg.cn/20191128014016948.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="正常的文档流是这个样子的"><br><img src="https://img-blog.csdnimg.cn/20191128014318955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后我们给它的box1添加一个左浮动：<br><img src="https://img-blog.csdnimg.cn/20191128014750428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>它就会变成下面这个样子：<img src="https://img-blog.csdnimg.cn/20191128014830217.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这个box1，也就是这个黄色的方块浮在了红色方块的上面，它已经脱离了原来的文档流，而红色的方块掉了下去，所以它就靠左了。</p>
+<p>那如果我把这个box1改为右浮动，它就会变成下面这个样子：<br>黄色的方块就会浮到右边。<br><img src="https://img-blog.csdnimg.cn/20191128015724302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>那如果我给这个box2也添加一个左浮动，那么这个红色的方块也会沿着父容器靠左，但是左边已经有黄色方块了，这时候它就会挨着黄色的方块靠右进行排列。<img src="https://img-blog.csdnimg.cn/20191128020312778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="float的注意事项"><a href="#float的注意事项" class="headerlink" title="float的注意事项"></a>float的注意事项</h2><ul>
+<li>只会影响后面的元素</li>
+<li>内容默认提升半层</li>
+<li>默认宽根据内容决定</li>
+<li>换行排列</li>
+<li>主要给块元素添加来实现布局，也可以给内联元素添加（但是很少用到）</li>
+</ul>
+<p>就比如下面这张图片，我们是给红色的方块加了一个左浮动，让它浮在了上面，然后再给蓝色方块里加入文字，发现文字并没有被红色方块所覆盖，因为这个文字的层级要高于蓝色方块，所以它被挡到了外面。</p>
+<p>这样的一个现象可以做一些<strong>图文混排</strong>的效果，红色区域可以做一个图片，然后文字区域可以做一些图片的描述<img src="https://img-blog.csdnimg.cn/20191128022208613.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这个就是当浮动的元素在父容器中排列不下的情况下，它就会自动折行，会排到下面。<br><img src="https://img-blog.csdnimg.cn/20191128023340722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvbWVob3cwODI3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>由于浮动会影响到后面元素的布局，而有的时候我们不希望下面的元素受到影响，所以我们要考虑清除浮动：</strong></p>
+<h2 id="如何清除浮动？"><a href="#如何清除浮动？" class="headerlink" title="如何清除浮动？"></a>如何清除浮动？</h2><p>上下排列：clear属性，表示清除浮动的 left、right、both<br>嵌套排列：<br>      固定宽高：不推荐，不能把高度固定死，不适合做自适应的效果。<br>      父元素浮动：不推荐，因为父容器浮动也会影响到后面的元素<br>      overflow：hidden（BFC规范），如果有子元素想溢出，那么会受到影响。<br>      display：inline-block（BFC规范），不推荐，父容器会影响到后面的元素。<br>      设置空标签：不推荐，会多添加一个标签。<br>      after伪类：推荐，是空标签的加强版，目前各大公司的做法。<br>      （clear属性指挥操控块标签，对内联标签不起作用）</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/163/425570952.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='8c6ad7bc1515abbd2c3c'
+        data-cs='9816dbdc6eb1f845cb6d06b80634fe46e6f9bf4d'
+        data-r='git@github.com:adminthw/adminthw.github.io.git'
+        data-o='adminthw'
+        data-a='adminthw'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
